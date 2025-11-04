@@ -1,0 +1,42 @@
+cmake_minimum_required(VERSION 3.20)
+project(sdlpractice)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build)
+
+
+set(SDL3_LIBRARY C:/SDL3/x86_64-w64-mingw32/lib/libSDL3.lib)
+set(SDL3_INCLUDE_DIR C:/SDL3/x86_64-w64-mingw32/include/SDL3)
+set(SDL3_DLL C:/SDL3/x86_64-w64-mingw32/bin/SDL3.dll)
+set(SDL3_DIR C:/SDL3/x86_64-w64-mingw32/lib/cmake/SDL3)
+find_package(SDL3 REQUIRED)
+set(glm_DIR C:/glm/install/share/glm)
+find_package(glm CONFIG REQUIRED)
+set(SDL3_imageLIBRARY C:/SDL3_image/x86_64-w64-mingw32/lib/libSDL3.lib)
+set(SDL3_image_INCLUDE_DIR C:/SDL3_image/x86_64-w64-mingw32/include/SDL3_image)
+set(SDL3_image_DLL C:/SDL3_image/x86_64-w64-mingw32/bin/SDL3_image.dll)
+set(SDL3_image_DIR C:/SDL3_image/x86_64-w64-mingw32/lib/cmake/SDL3_image)
+find_package(SDL3_image REQUIRED)
+set(ZLIB_LIBRARY C:/zlib-1.3.1/lib/zlib.lib)
+set(ZLIB_INCLUDE_DIR C:/zlib-1.3.1/include)
+set(ZLIB_DLL C:/zlib-1.3.1/bin/zlib.dll)
+find_package(ZLIB REQUIRED)
+set(PNG_INCLUDE_DIR C:/libpng-1.6.50/include)
+set(PNG_LIBRARY CC:/libpng-1.6.50/lib/libpng16.lib)
+set(PNG_PNG_INCLUDE_DIR C:/libpng-1.6.50/include)
+set(PNG_PNG_LIBRARY C:/libpng-1.6.50/lib/libpng16.lib)
+set(PNG_DLL C:/libpng-1.6.50/bin/libpng16.dll)
+set(PNG_PNG_DLL C:/libpng-1.6.50/bin/libpng16.dll)
+set(PNG_DIR C:/libpng-1.6.50/lib/cmake/PNG)
+set(PNG_PNG_DIR C:/libpng-1.6.50/lib/cmake/PNG)
+find_package(PNG REQUIRED)
+
+
+add_executable(${PROJECT_NAME} src/main.cpp)
+target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_23)
+target_link_libraries(${PROJECT_NAME} PRIVATE SDL3::SDL3 glm::glm SDL3_image::SDL3_image INTERFACE PNG::PNG ZLIB::ZLIB)
+
+file(COPY Content DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})

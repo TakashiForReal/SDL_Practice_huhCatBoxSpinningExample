@@ -1,0 +1,5 @@
+C:\vsPractice\sdlpractice\build\Debug\SDL3_image.dll
+C:\vsPractice\sdlpractice\build\Debug\SDL3.dll
+C:\vsPractice\sdlpractice\build\Debug\libpng16.dll
+C:\vsPractice\sdlpractice\build\Debug\zlib1.dll
+C:\vsPractice\sdlpractice\build\sdlpractice.dir\Debug\sdlpract.77F187B9.Up2Date

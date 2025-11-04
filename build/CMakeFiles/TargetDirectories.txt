@@ -1,0 +1,3 @@
+C:/vsPractice/sdlpractice/build/CMakeFiles/sdlpractice.dir
+C:/vsPractice/sdlpractice/build/CMakeFiles/ALL_BUILD.dir
+C:/vsPractice/sdlpractice/build/CMakeFiles/ZERO_CHECK.dir

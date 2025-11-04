@@ -1,0 +1,10 @@
+^C:\VSPRACTICE\SDLPRACTICE\BUILD\CMAKEFILES\8F15488EACDE1D63C3BFB53CD6826CC7\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/vsPractice/sdlpractice -BC:/vsPractice/sdlpractice/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/vsPractice/sdlpractice/build/sdlpractice.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
